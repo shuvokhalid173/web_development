@@ -19,10 +19,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $count = mysqli_num_rows($result);
     if ($count == 1) {
         echo "welcome";
-        
+        $dpp->close();
     }
     else {
-        echo "error";
+        echo "please sign up first <br>";
+        header("Location: login.php");
+        
     }
+    
 }
 ?>
